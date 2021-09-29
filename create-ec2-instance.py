@@ -8,7 +8,7 @@ SUBNET_ID = os.environ['SUBNET_ID']
 
 ec2 = boto3.resource('ec2')
 
-def lamda_handler(event, context):
+def lambda_handler(event, context):
     
     instance = ec2.create_instances(
         ImageId=AMI,
